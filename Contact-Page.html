@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact-Page</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+        <!-- Logos on either side of the header using float left/right -->
+        <img src="./assets/img/PinClipart.com_speaker-clip-art_3208571.png" alt="Speakers.com Logo" width="100" height="100" style="float:left">
+        <img src="./assets/img/PinClipart.com_speaker-clip-art_3208571.png" alt="Speakers.com Logo" width="100" height="100" style="float:right">
+        <header class="header">
+                <h1 class="header-text">Speakers.com</h1>
+                <!-- Navigation Bar using a button for the dropdown bar which when hoverd over displays the other pages in drop down form-->
+                <nav class="nav">
+                    <table class="nav-table">
+                        <tr>
+                            <a class="Home-Page" href="Home-Page.html">Home Page</a>
+                            <div class="dropdown">
+                                <button class="dropdown-button">Speakers
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a class="Item-Page" href="Item-Page-1.html">All Speakers</a>
+                                    <a class="Item-Page-2" href="Item-Page-2.html">Photos</a>
+                                </div>
+                            </div>
+                            <a class="Contact-Page" href="Contact-Page.html">Contact Page</a>
+                        </tr>
+                    </table>
+                    <!-- commenting section which uses an aside which moves it to the side of the page -->
+                    <!-- when on mobile devices or smaller screen it moves to the bottom of the page -->
+                    <div class="row">
+                        <aside>
+                        <h3>Comment Section</h3>
+                        <p>We value your feedback here, so besides contacting us via the 
+                            contact page, try posting a comment here, just add your name and 
+                            comment and watch it pop up below. Here you will also be able to 
+                            see what others have to say aswell, so get commenting!</p>
+                        <br />
+                        <fieldset>
+                            <legend>Comment Section</legend>
+                            <label for="name-input">Name:</label>
+                            <br />
+                            <input type="text" id="name-input" placeholder="Your Name Here">
+                            <br />
+                            <label for="comment-input">Comment:</label>
+                            <br />
+                            <input type="text" id="comment-input" placeholder="Your Comment Here">
+                            <br />
+                            <input type="button" value="Post" id="comment-button">
+                        </fieldset>
+                        <p>Comment Section:</p>
+                        <ul id="comment-output"></ul>
+                        <br />
+                            </aside>
+                            <!-- contact page which takes in the users email, message, name and phone number and gives a thank you for the name entred-->
+                                <section class="body">
+                                    <h1>Contact Page</h1>
+                                    <p>We value your feedback as it allows us to grow and improve 
+                                        to make your browsing and buying experiance the best it can be! 
+                                        Feel free to send us an email, just put in your name, email and 
+                                        phone number and we will get right back to you!</p>
+                                    <div class="placeholder"></div>
+                                    <fieldset id="contact-fieldset">
+                                    <legend>Contact Section</legend>
+                                    <input type="text" id="contact-name" placeholder="Your Name Here">
+                                    <br />
+                                    <input type="text" id="contact-email" placeholder="Your Email Address Here">
+                                    <br />
+                                    <input type="text" id="contact-phone" placeholder="Your Phone Number Here">
+                                    <br />
+                                    <textarea placeholder="Your Message Here" id="contact-text" cols="30" rows="10"></textarea>
+                                    <br />
+                                    <input type="button" value="Post" id="contact-button">
+                                    <p id="contact-output"></p>
+                                    </fieldset>
+                                    <h2></h2>
+                                </section>
+                    </div>
+                     <!-- Fotter which has been styled to always appear after all of the main body text has ended, will grow in length if comment section gets to long for page -->
+                    <footer class="footer">Speakers.com owen by Sam Barnes of Otago Polytechnic ©</footer>
+                </nav>
+            </header>
+    <script src="./assets/js/Main.js"></script>
+</body>
+</html>

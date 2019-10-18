@@ -1,0 +1,40 @@
+
+[
+    {
+        "id": 1,
+        "name": "JBL Flip 4",
+        "price": "$180",
+        "photo": ""
+    },
+    {
+        "id": 2,
+        "name": "Ultimate Ears BOOM 3",
+        "price": "$280",
+        "photo": ""
+    },
+    {
+        "id": 3,
+        "name": "JBL Charge 4",
+        "price": "$250",
+        "photo": ""
+    },
+    {
+        "id": 4,
+        "name": "Altec Lansing 8",
+        "price": "$650",
+        "photo": ""
+    },
+    {
+        "id": 5,
+        "name": "XCD Portable",
+        "price": "$40",
+        "photo": ""
+    },
+    {
+        "id": 6,
+        "name": "B&O Beoplay P2",
+        "price": "$280",
+        "photo": ""
+    }
+]
+

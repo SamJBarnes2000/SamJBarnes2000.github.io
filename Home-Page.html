@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Samm Barnes Assignment Home-Page</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+        <!-- Logos on either side of the header using float left/right -->
+        <img src="./assets/img/PinClipart.com_speaker-clip-art_3208571.png" alt="Speakers.com Logo" width="100" height="100" style="float:left">
+        <img src="./assets/img/PinClipart.com_speaker-clip-art_3208571.png" alt="Speakers.com Logo" width="100" height="100" style="float:right">
+    <header class="header">
+        <h1 class="header-text">Speakers.com</h1>
+        <!-- Navigation Bar using a button for the dropdown bar which when hoverd over displays the other pages in drop down form-->
+        <nav class="nav">
+            <table class="nav-table">
+                <tr>
+                    <a class="Home-Page" href="Home-Page.html">Home Page</a>
+                    <a class="Contact-Page" href="Contact-Page.html">Contact Page</a>
+                    <div class="dropdown">
+                        <button class="dropdown-button">Speakers
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a class="Item-Page" href="Item-Page-1.html">All Speakers</a>
+                            <a class="Item-Page-2" href="Item-Page-2.html">Photos</a>
+                        </div>
+                    </div>
+                </tr>
+            </table>
+            <!-- commenting section which uses an aside which moves it to the side of the page -->
+            <!-- when on mobile devices or smaller screen it moves to the bottom of the page -->
+            <div class="row">
+                    <aside>
+                        <h3>Comment Section</h3>
+                        <p>We value your feedback here, so besides contacting us via the 
+                            contact page, try posting a comment here, just add your name and 
+                            comment and watch it pop up below. Here you will also be able to 
+                            see what others have to say aswell, so get commenting!</p>
+                        <br />
+                        <fieldset>
+                                <legend>Comment Section</legend>
+                                <label for="name-input">Name:</label>
+                                <br />
+                                <input type="text" id="name-input" placeholder="Your Name Here">
+                                <br />
+                                <label for="comment-input">Comment:</label>
+                                <br />
+                                <input type="text" id="comment-input" placeholder="Your Comment Here">
+                                <br />
+                                <input type="button" value="Post" id="comment-button">
+                        </fieldset>
+                        <p>Comment Section:</p>
+                        <ul id="comment-output"></ul>
+                        <br />
+                    </aside>
+                    <!-- basic information when the user loads the website -->
+                        <section class="body">
+                            <h2>Welcome To Speakers.Com</h2>
+                            <p>Welcome to our webiste, our webiste is a place for you the user
+                                to browse and find the right speaker for you! we have for you 
+                                the best rated speekers for quick and easy purchanse right from 
+                                our website. please feel free to browse around to find the speaker 
+                                that you have been looking for!</p>
+                            <div class="placeholder"></div>
+                            <h2>How To Find The Best Speaker?</h2>
+                            <p>This is easy! its different for everyone. If your a person that likes 
+                                a small compact speeker to have on the go, get a small one. On the 
+                                other scale if you want to stand out and be the life of the party, 
+                                we have you coverd with larger speakers. If your someone who likes alot of bass or more 
+                                of vocals, we have both coverd. The main thing to do is when browsing 
+                                read up on them, if your not too sure that we have given enough 
+                                information, look the model up online and reaserch it more, the 
+                                manafacturer is the best place to go. If you think we dont have 
+                                something that might be useful to know about a speeker or if your 
+                                desired speeker isnt here, flick us an email using the Contact Page 
+                                and we will get right on that!</p>
+                        </section>
+            </div>
+             <!-- Fotter which has been styled to always appear after all of the main body text has ended, will grow in length if comment section gets to long for page -->
+            <footer class="footer">Speakers.com owen by Sam Barnes of Otago Polytechnic ©</footer>
+        </nav>
+    </header>
+    <script src="./assets/js/Main.js"></script>
+</body>
+</html>

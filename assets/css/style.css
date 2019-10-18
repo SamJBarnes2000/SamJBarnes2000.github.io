@@ -1,0 +1,198 @@
+/* drop down nav bar */
+.header {
+    background-color: rgb(124, 197, 243);
+    padding-top: 100px;
+}
+
+.header-text {
+    padding-left: 40%;
+}
+
+.nav {
+    background-color: rgb(63, 185, 226);
+    padding-top: 10px;
+}
+
+nav a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover ,.dropdown:hover .dropdown-button{
+    /* when the mouse hovers over the length/width of the button, the text colour changes aswell as adds the drop down box colour*/
+    background-color: rgb(63, 185, 226);
+    color: white;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropdown-button {
+    /* makes the button look like the rest of the navigation bar */
+    border: none;
+    outline: none;
+    background-color: rgb(63, 185, 226);
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    /* changes the look and color of the dropown content */
+    display: none;
+    position: absolute;
+    background-color: rgb(63, 185, 226);
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(63, 185, 226);
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* body */
+.row {
+    /* allows the comment section to wrap to the side of the page on large screens and at the bottom of the page for smaller screens */
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+aside {
+    flex: 20%;
+    background-color: rgb(198, 235, 232);
+}
+
+body {
+    margin: 0px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+}
+
+.body {
+    flex: 80%;
+    background-color: white;
+}
+
+.placeholder {
+    background-color: whitesmoke;
+    padding: 20px;
+    height: 24px;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: rgb(105, 218, 208);
+}
+
+/* contact page */
+#contact-name, #contact-email, #contact-phone {
+    width: 200px;
+    height: 20px;
+    padding-left: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+}
+
+#contact-text {
+    width: 200px;
+    height: 200px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+}
+
+#contact-fieldset {
+    width: 210px;
+}
+
+/* Speakers Table */
+th, td {
+    padding-left: 200px;
+}
+
+
+/* raiting system */
+*{
+    box-sizing: border-box;
+}
+
+.rate {
+    float: left;
+    height: 30px;
+    padding-left: 10;
+}
+
+/* what the dropdown is doing is displaying radio buttons which when pressed change color to the one clicked, and depending on the previous clickes the ones around it */
+.rate:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+}
+
+/* dispalys grey text when an area from the right hand side backwards is not pressed */
+.rate:not(:checked) > label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 20px;
+    color: grey;
+   
+}
+
+/* changes the display from text and radio buttons to a star */
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+
+/* changes the colour of the star and all previous stars to a bright yellow when clicked */
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+
+/* changes the colour to a slightly darker yellow if new stars are being hoverd over*/
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+
+/* changes all of the stars colour when hoverd over, if the user is hovering over start 4 all previous starts will be a darker yellow */
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+/* phone/tablet display */
+.column{ width:100% }
+
+@media screen and (min-width: 600px) {
+  /* For tablets: */
+  .column { width: 50% }  
+}
+
+@media screen and (min-width: 1024px) {
+  /* For desktop: */
+  .column { width: 33.333% }  
+}

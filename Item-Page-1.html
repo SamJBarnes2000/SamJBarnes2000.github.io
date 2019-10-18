@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Item-Page-1</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Logos on either side of the header using float left/right -->
+        <img src="./assets/img/PinClipart.com_speaker-clip-art_3208571.png" alt="Speakers.com Logo" width="100" height="100" style="float:left">
+        <img src="./assets/img/PinClipart.com_speaker-clip-art_3208571.png" alt="Speakers.com Logo" width="100" height="100" style="float:right">
+        <header class="header">
+                <h1 class="header-text">Speakers.com</h1>
+                <!-- Navigation Bar using a button for the dropdown bar which when hoverd over displays the other pages in drop down form-->
+                <nav class="nav">
+                    <table class="nav-table">
+                        <tr>
+                            <a class="Home-Page" href="Home-Page.html">Home Page</a>
+                            <div class="dropdown">
+                                <button class="dropdown-button">Speakers
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a class="Item-Page" href="Item-Page-1.html">All Speakers</a>
+                                    <a class="Item-Page-2" href="Item-Page-2.html">Photos</a>
+                                </div>
+                            </div>
+                            <a class="Contact-Page" href="Contact-Page.html">Contact Page</a>
+                        </tr>
+                    </table>
+                    <!-- commenting section which uses an aside which moves it to the side of the page -->
+                    <!-- when on mobile devices or smaller screen it moves to the bottom of the page -->
+                    <div class="row">
+                            <aside>
+                            <h3>Comment Section</h3>
+                        <p>We value your feedback here, so besides contacting us via the 
+                            contact page, try posting a comment here, just add your name and 
+                            comment and watch it pop up below. Here you will also be able to 
+                            see what others have to say aswell, so get commenting!</p>
+                        <br />
+                        <fieldset>
+                            <legend>Comment Section</legend>
+                            <label for="name-input">Name:</label>
+                            <br />
+                            <input type="text" id="name-input" placeholder="Your Name Here">
+                            <br />
+                            <label for="comment-input">Comment:</label>
+                            <br />
+                            <input type="text" id="comment-input" placeholder="Your Comment Here">
+                            <br />
+                            <input type="button" value="Post" id="comment-button">
+                        </fieldset>
+                        <p>Comment Section:</p>
+                        <ul id="comment-output"></ul>
+                        <br />
+                            </aside>
+                            <!-- Body text which holds the table which is loaded from the JSON file -->
+                                <section class="body">
+                                    <h1>All Speakers</h1>
+                                    <p>This is where all of out speakers are held, please feel 
+                                        free to browse around for the one you are looking for 
+                                        and contact us if you have any problems or queries!</p>
+                                    <div class="placeholder"></div>
+                                    <table id="speakers-table" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Price</th>
+                                            </tr>
+                                        </thead>
+                                        <!-- area where the loaded information will go -->
+                                        <tbody id="table-body">
+                                            
+                                        </tbody>
+                                    </table>
+                                    <div class="placeholder"></div>
+                                    <h1>Feedback</h1>
+                                    <p>We value your feedback here at Speakers.com, so we would like 
+                                        to know what you would rate each speaker out of 5 stars. this 
+                                        allows us to find the most and least popular speakers in stock 
+                                        so we can always be improving our inventory. if you have any futher 
+                                        queries please feel free to contact us via the contact page!</p>
+                                        <!-- rating system which allows the user to pick a rating out of 5 stars -->
+                                        <!-- this was made using html and css but unfortunatly not JS -->
+                                        <!-- i used an online example to help me with this -->
+                                        <!-- link: https://codepen.io/tammykimkim/pen/yegZRw -->
+                                        <!-- Errors: currently only applies to the first line, if used on others it will overide the first line, but still works -->
+                                        <table id="rating-table">
+                                                <thead>
+                                                        <tr>
+                                                            <th>Speaker</th>
+                                                            <th>Rating</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="rating-table-body">
+                                                        <tr>
+                                                            <td>JBL Flip 4</td>
+                                                            <td class="rate">
+                                                                    <input type="radio" id="star-5" name="rate" value="5">
+                                                                    <label for="star-5" title="5 Stars">5 Stars</label>
+                                                                    <input type="radio" id="star-4" name="rate" value="4">
+                                                                    <label for="star-4" title="4 Stars">4 Stars</label>
+                                                                    <input type="radio" id="star-3" name="rate" value="3">
+                                                                    <label for="star-3" title="3 Stars">3 Stars</label>
+                                                                    <input type="radio" id="star-2" name="rate" value="2">
+                                                                    <label for="star-2" title="2 Stars">2 Stars</label>
+                                                                    <input type="radio" id="star-1" name="rate" value="1">
+                                                                    <label for="star-1" title="1 Stars">1 Stars</label>
+                                                                </td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>Ultimate Ears BOOM 3</td>
+                                                                <td class="rate">
+                                                                        <input type="radio" id="star-5" name="rate" value="5">
+                                                                        <label for="star-5" title="5 Stars">5 Stars</label>
+                                                                        <input type="radio" id="star-4" name="rate" value="4">
+                                                                        <label for="star-4" title="4 Stars">4 Stars</label>
+                                                                        <input type="radio" id="star-3" name="rate" value="3">
+                                                                        <label for="star-3" title="3 Stars">3 Stars</label>
+                                                                        <input type="radio" id="star-2" name="rate" value="2">
+                                                                        <label for="star-2" title="2 Stars">2 Stars</label>
+                                                                        <input type="radio" id="star-1" name="rate" value="1">
+                                                                        <label for="star-1" title="1 Stars">1 Stars</label>
+                                                                    </td>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td>JBL Charge 4</td>
+                                                                    <td class="rate">
+                                                                            <input type="radio" id="star-5" name="rate" value="5">
+                                                                            <label for="star-5" title="5 Stars">5 Stars</label>
+                                                                            <input type="radio" id="star-4" name="rate" value="4">
+                                                                            <label for="star-4" title="4 Stars">4 Stars</label>
+                                                                            <input type="radio" id="star-3" name="rate" value="3">
+                                                                            <label for="star-3" title="3 Stars">3 Stars</label>
+                                                                            <input type="radio" id="star-2" name="rate" value="2">
+                                                                            <label for="star-2" title="2 Stars">2 Stars</label>
+                                                                            <input type="radio" id="star-1" name="rate" value="1">
+                                                                            <label for="star-1" title="1 Stars">1 Stars</label>
+                                                                        </td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>Altec Lansing 8</td>
+                                                                        <td class="rate">
+                                                                                <input type="radio" id="star-5" name="rate" value="5">
+                                                                                <label for="star-5" title="5 Stars">5 Stars</label>
+                                                                                <input type="radio" id="star-4" name="rate" value="4">
+                                                                                <label for="star-4" title="4 Stars">4 Stars</label>
+                                                                                <input type="radio" id="star-3" name="rate" value="3">
+                                                                                <label for="star-3" title="3 Stars">3 Stars</label>
+                                                                                <input type="radio" id="star-2" name="rate" value="2">
+                                                                                <label for="star-2" title="2 Stars">2 Stars</label>
+                                                                                <input type="radio" id="star-1" name="rate" value="1">
+                                                                                <label for="star-1" title="1 Stars">1 Stars</label>
+                                                                            </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                            <td>XCD Portable</td>
+                                                                            <td class="rate">
+                                                                                    <input type="radio" id="star-5" name="rate" value="5">
+                                                                                    <label for="star-5" title="5 Stars">5 Stars</label>
+                                                                                    <input type="radio" id="star-4" name="rate" value="4">
+                                                                                    <label for="star-4" title="4 Stars">4 Stars</label>
+                                                                                    <input type="radio" id="star-3" name="rate" value="3">
+                                                                                    <label for="star-3" title="3 Stars">3 Stars</label>
+                                                                                    <input type="radio" id="star-2" name="rate" value="2">
+                                                                                    <label for="star-2" title="2 Stars">2 Stars</label>
+                                                                                    <input type="radio" id="star-1" name="rate" value="1">
+                                                                                    <label for="star-1" title="1 Stars">1 Stars</label>
+                                                                                </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td>B&O Beoplay P2</td>
+                                                                                <td class="rate">
+                                                                                        <input type="radio" id="star-5" name="rate" value="5">
+                                                                                        <label for="star-5" title="5 Stars">5 Stars</label>
+                                                                                        <input type="radio" id="star-4" name="rate" value="4">
+                                                                                        <label for="star-4" title="4 Stars">4 Stars</label>
+                                                                                        <input type="radio" id="star-3" name="rate" value="3">
+                                                                                        <label for="star-3" title="3 Stars">3 Stars</label>
+                                                                                        <input type="radio" id="star-2" name="rate" value="2">
+                                                                                        <label for="star-2" title="2 Stars">2 Stars</label>
+                                                                                        <input type="radio" id="star-1" name="rate" value="1">
+                                                                                        <label for="star-1" title="1 Stars">1 Stars</label>
+                                                                                    </td>
+                                                                            </tr>
+                                                    </tbody>
+                                        </table>
+                                        
+                                </section>
+                    </div>
+                    <!-- Fotter which has been styled to always appear after all of the main body text has ended, will grow in length if comment section gets to long for page -->
+                    <footer class="footer">Speakers.com owen by Sam Barnes of Otago Polytechnic ©</footer>
+                </nav>
+            </header>
+    <script src="./assets/js/Main.js"></script>
+</body>
+</html>

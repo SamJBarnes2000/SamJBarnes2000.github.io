@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Item-Page-2</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+        <!-- Logos on either side of the header using float left/right -->
+        <img src="./assets/img/PinClipart.com_speaker-clip-art_3208571.png" alt="Speakers.com Logo" width="100" height="100" style="float:left">
+        <img src="./assets/img/PinClipart.com_speaker-clip-art_3208571.png" alt="Speakers.com Logo" width="100" height="100" style="float:right">
+        <header class="header">
+                <h1 class="header-text">Speakers.com</h1>
+                <!-- Navigation Bar using a button for the dropdown bar which when hoverd over displays the other pages in drop down form-->
+                <nav class="nav">
+                    <table class="nav-table">
+                        <tr>
+                            <a class="Home-Page" href="Home-Page.html">Home Page</a>
+                            <div class="dropdown">
+                                <button class="dropdown-button">Speakers
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a class="Item-Page" href="Item-Page-1.html">All Speakers</a>
+                                    <a class="Item-Page-2" href="Item-Page-2.html">Photos</a>
+                                </div>
+                            </div>
+                            <a class="Contact-Page" href="Contact-Page.html">Contact Page</a>
+                        </tr>
+                    </table>
+                    <!-- commenting section which uses an aside which moves it to the side of the page -->
+                    <!-- when on mobile devices or smaller screen it moves to the bottom of the page -->
+                    <div class="row">
+                            <aside>
+                            <h3>Comment Section</h3>
+                        <p>We value your feedback here, so besides contacting us via the 
+                            contact page, try posting a comment here, just add your name and 
+                            comment and watch it pop up below. Here you will also be able to 
+                            see what others have to say aswell, so get commenting!</p>
+                        <br />
+                        <fieldset>
+                            <legend>Comment Section</legend>
+                            <label for="name-input">Name:</label>
+                            <br />
+                            <input type="text" id="name-input" placeholder="Your Name Here">
+                            <br />
+                            <label for="comment-input">Comment:</label>
+                            <br />
+                            <input type="text" id="comment-input" placeholder="Your Comment Here">
+                            <br />
+                            <input type="button" value="Post" id="comment-button">
+                        </fieldset>
+                        <p>Comment Section:</p>
+                        <ul id="comment-output"></ul>
+                        <br />
+                            </aside>
+                            <!-- loads in the images from the img folder in assets -->
+                            <!-- i could not get this to work with the JSON files which is why they are in a seperate page -->
+                                <section class="body">
+                                    <h1>Photos</h1>
+                                    <p>Here is where we keep all of the photos of our Speakers, 
+                                        we like to keep them seperate so users can browse through 
+                                        if they care about about a speaker looks, what can we say 
+                                        we dont want you pulling up to a party with a funny looking 
+                                        speaker. if a speakers looks/features are your sort of thing 
+                                        your in the right place, when you think you have found a good 
+                                        looking one hop over to the All Speakers tab and continue on 
+                                        from there. if you dont care about how a speaker looks and only 
+                                        want to know its raw power, feel free to skip this page, we wont judge!</p>
+                                    <div class="placeholder"></div>
+                                    <h4>JBL Flip 4</h4>
+                                    <img src="./assets/img/71dZJTGY4ML._SL1500_.jpg" alt="JBL Flip 4" width="400", height="400">
+                                    <h4>Ultimate Ears BOOM 3</h4>
+                                    <img src="./assets/img/ultimate-ears-boom-3-hero.jpg" alt="Ultimate Ears BOOM 3" width="650", height="400">
+                                    <h4>JBL Charge 4</h4>
+                                    <img src="./assets/img/813GAqvZQlL._SX425_.jpg" alt="JBL Charge 4" width="400", height="400">
+                                    <h4>Altec Lansing 8</h4>
+                                    <img src="./assets/img/exp-1-1100x1000-cropped.jpg" alt="Altec Lansing 8" width="400", height="400">
+                                    <h4>XCD Portable</h4>
+                                    <img src="./assets/img/114027-L-HI.jpg" alt="XCD Portable" width="400", height="400">
+                                    <h4>B&O Beoplay P2</h4>
+                                    <img src="./assets/img/61bE06aU03L._SL1213_.jpg" alt="B&O Beoplay P2" width="400", height="400">
+                                </section>
+        
+                    </div>
+                     <!-- Fotter which has been styled to always appear after all of the main body text has ended, will grow in length if comment section gets to long for page -->
+                    <footer class="footer">Speakers.com owen by Sam Barnes of Otago Polytechnic ©</footer>
+                </nav>
+            </header>
+    <script src="./assets/js/Main.js"></script>
+</body>
+</html>
